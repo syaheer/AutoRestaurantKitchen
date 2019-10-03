@@ -65,6 +65,7 @@ public class OrderedItemAdapter extends BaseAdapter {
 
         if (!m.isPreparing()) {
             progressButton.setText("Prepare Ingredients");
+            progressButton.setVisibility(View.VISIBLE);
             progressButton.setEnabled(true);
             orderStatus.setText("Order Received");
             progressButton.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +76,7 @@ public class OrderedItemAdapter extends BaseAdapter {
             });
         } else if (!m.isCooking()) {
             progressButton.setText("Cook");
+            progressButton.setVisibility(View.VISIBLE);
             progressButton.setEnabled(true);
             orderStatus.setText("Ingredients Prepared");
             progressButton.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +87,7 @@ public class OrderedItemAdapter extends BaseAdapter {
             });
         } else if (!m.isReadyForPickup()) {
             progressButton.setText("Serve");
+            progressButton.setVisibility(View.VISIBLE);
             orderStatus.setText("Food ready to serve");
             progressButton.setOnClickListener(new View.OnClickListener() {
                 @Override
